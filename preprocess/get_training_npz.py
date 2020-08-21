@@ -81,12 +81,13 @@ def read_annotation(type_dict, nslices, filename):
     The annotation has 6 digits reserved for various infection types. Only the first two digits are used (GGO and consolidation)
     '''
     all_types = type_dict[filename]['all_types']
-    if len(all_types) > 1:
-        return np.array([[-1] * 6] * nslices)
-    else:
-        annotation = np.zeros(6, int)
-        annotation[all_types[0]-1] = 1
-        return np.array([annotation] * nslices)
+    annotation = np.zeros(6, int)
+    if 2 in all_types:
+        annotation[1] = 1
+    elif 1 in all_types:
+        annotation[0] = 1
+
+    return np.array([annotation] * nslices)
 
 if __name__ == '__main__':
     args = parser.parse_args()
