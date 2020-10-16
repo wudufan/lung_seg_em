@@ -7,7 +7,9 @@ EM algorithm is very easy to implement, no work need to be done for the network 
 3. Do one iteration of supervised learning using the modified output. 
 The majority of the efforts during the implementation of EM will be how to organize your data. 
 
-Our paper will be online soon. The original paper for the EM algorithm can be found [here](https://openaccess.thecvf.com/content_iccv_2015/html/Papandreou_Weakly-_and_Semi-Supervised_ICCV_2015_paper.html). 
+**Our paper is online as Early Access in Journal of Biomedical and Health Informatics**: https://ieeexplore.ieee.org/document/9220769
+
+The original paper for the EM algorithm can be found [here](https://openaccess.thecvf.com/content_iccv_2015/html/Papandreou_Weakly-_and_Semi-Supervised_ICCV_2015_paper.html). 
 
 Please see the following flowchart for the workflow of the supervise+EM training. UNet1 is the fully supervised network for infected region segmentation. UNet2 is the EM-trained network for consolidation segmentation.
 
